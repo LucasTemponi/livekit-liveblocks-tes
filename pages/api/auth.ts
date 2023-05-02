@@ -10,6 +10,7 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
     return res.status(403).end();
   }
 
+
   // For the avatar example, we're generating random users
   // and set their info from the authentication endpoint
   // See https://liveblocks.io/docs/api-reference/liveblocks-node#authorize for more information
@@ -26,6 +27,7 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
       // picture: `https://liveblocks.io/avatars/avatar-${Math.floor(Math.random() * 30)}.png`,
     },
   });
+
   return res.status(response.status).end(response.body);
 }
 
